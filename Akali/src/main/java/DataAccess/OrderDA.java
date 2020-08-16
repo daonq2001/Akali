@@ -27,7 +27,7 @@ public class OrderDA implements OrderDAO {
 
     @Override
     public Order getOrder() throws SQLException {
-        query = "SELECT MAX(ID) as ID, CustomerID, Date FROM Orders;";
+        query = "SELECT * FROM Orders ORDER BY ID DESC LIMIT 1;";
         DBHelper.getConnection();
         ResultSet rs = DBHelper.executeQuery(query);
         Order order = new Order();
