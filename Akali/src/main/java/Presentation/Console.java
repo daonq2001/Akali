@@ -184,11 +184,11 @@ public class Console {
 
                                 Line(140, "*");
                                 System.out.println("\nTHÔNG TIN HÓA ĐƠN");
-                                System.out.println("Khách hàng: " + c.getName());
-                                System.out.println("Email: " + c.getEmail());
+                                System.out.println("Khách hàng:    " + c.getName());
+                                System.out.println("Email:         " + c.getEmail());
                                 System.out.println("Số điện thoại: " + c.getPhone());
-                                System.out.println("Địa chỉ: " + c.getAddress());
-                                System.out.println("Ngày in: " + order.getDate());
+                                System.out.println("Địa chỉ:       " + c.getAddress());
+                                System.out.println("Ngày in:       " + order.getDate());
                                 Line(140, "-");
                                 System.out.printf("\n| %-10s | %-80s | %-10s | %-10s | %-15s |\n", "STT", "Tên sách",
                                         "Giá", "Số lượng", "Tạm tính");
