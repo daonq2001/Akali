@@ -103,8 +103,19 @@ public class Console {
                         System.out.printf("\n[1: Trở về], [2: Thêm vào giỏ hàng]: ");
                         a = sc.nextLine();
                         if (a.equals("2")) {
-                            System.out.printf("Số lượng (1..99): ");
-                            int amount = Integer.parseInt(sc.nextLine());
+                            
+                            int amount = 0;
+                            int choqua = 0;
+                            System.out.println("Nhập sai tự động nhập lại!");
+                            do {
+                                try {
+                                    System.out.printf("Số lượng (1..99): ");
+                                    amount = Integer.parseInt(sc.nextLine());
+                                    choqua = 0;
+                                } catch (Exception e) {
+                                    choqua = 1;
+                                }
+                            } while (choqua == 1);
                             if (amount > 0 && amount <= 99) {
                                 if (orderDetails == null) {
                                     orderDetails = new ArrayList<OrderDetail>();
@@ -258,7 +269,7 @@ public class Console {
                                     a = sc.nextLine();
                                 }
                             }
-                        } else{
+                        } else {
                             batdau = 1;
                         }
                     }
