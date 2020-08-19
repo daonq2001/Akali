@@ -19,7 +19,7 @@ public class BookDA implements BookDAO {
         try {
             DBHelper.getConnection();
             rs = DBHelper.executeQuery(query);
-            while(rs.next()){
+            while (rs.next()) {
                 Book book = getBook(rs);
                 lBooks.add(book);
             }
@@ -35,7 +35,7 @@ public class BookDA implements BookDAO {
         query = "SELECT * FROM Books WHERE ID = " + ID + ";";
         DBHelper.getConnection();
         rs = DBHelper.executeQuery(query);
-        while(rs.next()){
+        while (rs.next()) {
             book = getBook(rs);
         }
         DBHelper.closeConnection();
